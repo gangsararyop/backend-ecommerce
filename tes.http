@@ -1,0 +1,44 @@
+### Register
+POST http://localhost:5005/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "gangsar",
+    "email" : "gangsararyo@gmail.com",
+    "password": "testing"
+}
+
+### Get User Login
+GET http://localhost:5005/auth/keep-login HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZV9pZCI6MiwiaWF0IjoxNjM1MjU1MjQ0LCJleHAiOjE2MzUyOTg0NDR9.yiVGwq6yGBqqLPacfRykUHVKWDpQesVNk3vk9Z4nUjo
+
+### Login
+POST http://localhost:5005/auth/login?username=admin&password=Admin123 HTTP/1.1
+Content-Type: application/json
+
+
+### Add product
+POST http://localhost:5005/products/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Baju Putih"
+}
+
+### Get sizes and products
+GET http://localhost:5005/products/sizes HTTP/1.1
+Content-Type: application/json
+
+### Add Product
+POST http://localhost:5005/products/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "testing" : "testing"
+}
+
+###
+
+GET http://localhost:5005/products/get?page=0&limit=5&priceMin=1500&priceMax=2000&category=2  HTTP/1.1
+Content-Type: application/json
